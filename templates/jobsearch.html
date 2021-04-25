@@ -19,15 +19,18 @@
 
             </div>  
             <div id="content">
-                <h1>Job Results</h1>
-                {% for r in result %}
-                    <a href="{{ r['detail_url'] }}" style="top: 450px; left: 390px;">{{ r['title'] }}, {{ r['company_name'] }}</h1><br>
-                {% endfor %}    
-                
+                <h1>Job Search</h1>
+
+                <div id="">
+                    <form action="/jobsearch" method="POST">
+                        <input style="top: 200px; left: 390px;" type="text" placeholder="Job Title" id="title" name="title"><br>
+                        <input style="top: 250px; left: 390px;" type="text" placeholder="Country: ex. United States" id="country" name="country"><br>
+                        <button type="submit" >Search</button>
+                    </form>
+                </div>
             </div>
                            
         </div>
 
     </body>
 </html>
-

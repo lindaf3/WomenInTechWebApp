@@ -4,17 +4,41 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200;300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap" rel="stylesheet">
-        <link href="connect.css" rel="stylesheet">
-        <link href="nav.css" rel="stylesheet">
+        <link href="/static/connect.css" rel="stylesheet">
+        <link href="/static/nav.css" rel="stylesheet">
     </head>
     <body>
         <div class="topnav">
-            <a href="connect.html" >Connect with others</a>
-            <a href="project.html">Project Ideas</a>
-            <a href="job.html">Job search</a>
-            <a href="landingpage.html">Home</a>
+          <a href="connect" >Connect with others</a>
+          <a href="project">Project Ideas</a>
+          <a href="jobsearch">Job search</a>
+          <a href="/">Home</a>
           </div>
           <h1>Connect with people</h1>
+
+          <div id="container">
+            <form action="/connect" method="POST">
+              <label name=label>Become a Mentor</label><br>
+              <input  type="text" placeholder="Full Name" id="fullname" name="fullname"><br>
+              <input  type="text" placeholder="Job Title" id="job" name="job"><br>
+              <input  type="text" placeholder="Linkedin ID" id="linkedin" name="linkedin"><br>
+              <input  type="text" placeholder="Country: ex. United States" id="country" name="country"><br>
+              <button type="submit" >Enter</button>
+            </form>
+
+            <form action="/connect" method="POST">
+              <label name="label">Search by Job</label><br>
+              <input  type="text" placeholder="Job Title" id="field" name="field"><br>
+              <button type="submit" >Search</button>
+            </form>
+
+            <form action="/connect" method="POST">
+              <label name="label">Search by Location</label><br>
+              <input  type="text" placeholder="Country: ex. United States" id="location" name="location"><br>
+              <button type="submit" >Search</button>
+            </form>
+          </div>
+
           <div id="display">
           <div id="container">
             <h2>Mary Kane</h2>

@@ -47,24 +47,26 @@ def jobsearch():
     return render_template('jobsearch.html')
 
 #adding and viewing mentors
-@app.route('/mentors', method=('GET','POST'))
-def mentors():
+@app.route('/connect', methods=('GET','POST'))
+def connect():
     if request.method == "POST":
-        name = request.form.get('fullname') 
-        field = request.form.get('job')
-        linkedin = request.form.get('linkedin') 
-        location = request.form.get('country')
-        mentor = [name, field, linkedin, location]
-        message = add_mentor(mentor, DIRECTORY)
-        return render_template('mentors.html', message=message, m2="", m3="")
+        if request.form.get('label') == "Become a Mentor":
+            name = request.form.get('fullname') 
+            field = request.form.get('job')
+            linkedin = request.form.get('linkedin') 
+            location = request.form.get('country')
+            mentor = [name, field, linkedin, location]
+            message = add_mentor(mentor, DIRECTORY)
+            return render_template('connect.html', message=message, m2="", m3="")
 
-        field = request.form.get('field')
-        m2 = search_field(field, DIRECTORY)
-        return render_template('mentors.html', message="", m2=m2, m3="")
+        # field = request.form.get('field')
+        # m2 = search_field(field, DIRECTORY)
+        # return render_template('connect.html', message="", m2=m2, m3="")
 
-        location = request.form.get('location')
-        m3 = search_location(l, DIRECTORY)
-        return render_template('mentors.html', message="", m2="", m3=m3)
+        # location = request.form.get('location')
+        # m3 = search_location(l, DIRECTORY)
+        # return render_template('connect .html', message="", m2="", m3=m3)
+    return render_template('connect.html', message="", m2="", m3="")
         
 
 #posting project ideas
