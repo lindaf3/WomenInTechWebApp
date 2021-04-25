@@ -43,10 +43,10 @@ def get_data(data: str, indicator: int):
         #Inform the User that we cannot find stock data for their given symbol
         print(f'Cannot find jobs for {data} on page {page}.')
             
-if __name__ == '__main__':
-    get_data("qa", 1)     
+    if __name__ == '__main__':
+        get_data("qa", 1)     
 
 #home
 @app.route('/', methods=('GET', 'POST'))
-    def index():
-        return render_template('landingpage.html')
+def index():
+    return render_template('landingpage.html')
