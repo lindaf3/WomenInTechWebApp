@@ -1,0 +1,40 @@
+body{
+    background: url(landingpage.png) #27272F;
+    background-repeat: no-repeat;
+    background-size: 1250px;
+}
+
+img{
+    width: 550px;
+    height: auto;
+    display: flex;
+    position: absolute;
+    top: 115px;
+    left: 650px;
+}
+h1{
+    font-size: 54px;
+    font-family: 'Spectral', serif;
+    font-weight: normal;
+    position: absolute;
+    top: 60px;
+    left: 80px;
+}
+h2{
+    font-size: 40px;
+    font-family: 'spectral';
+    font-weight: normal;
+    position: absolute;
+    top: 120px;
+    left: 80px;
+}
+#para{
+    width: 500px;
+    font-size: 21px;
+    font-family: 'Karla', sans-serif;
+    position: absolute;
+    top: 190px;
+    left: 80px;
+    text-align: justify;
+    color: black;
+}
