@@ -47,6 +47,21 @@ def get_data(data: str, indicator: int):
         get_data("qa", 1)     
 
 #home
-@app.route('/', methods=('GET', 'POST'))
+@app.route('/')
 def index():
     return render_template('landingpage.html')
+
+#job search
+@app.route('/jobsearch', methods=('GET', 'POST'))
+def jobsearch():
+    if request.method == 'GET':
+        return render_template('jobsearch.html')
+    else:
+        return render_template('results.html')
+
+#results 
+@app.route('/results')
+def results():
+    return render_template('results.html')
+
+ 
