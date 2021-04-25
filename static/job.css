@@ -1,0 +1,38 @@
+body{
+    background: url(background.png) #27272F;
+    background-repeat: no-repeat;
+    background-size: 1250px;
+}
+h1{
+    font-size: 40px;
+    font-family: 'Spectral', serif;
+    font-weight: normal;
+    color: #EEE4F2;
+    text-align: center;
+}
+input{
+	width: 40%;
+	height: 40px;
+	border-radius: 20px;
+	border: solid 2px #EEE4F2;
+    opacity: 0.8;
+    position: absolute;
+    top: 200px;
+    left: 390px;
+    text-align: center;
+}
+button{
+    cursor: pointer;
+    width: 15%;
+    height: 50px;
+    text-align: center;
+    background-color: #EEE4F2;
+    opacity: 0.9;
+    margin: 10px;
+    position: absolute;
+    top: 260px;
+    left: 540px;
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
