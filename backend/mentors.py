@@ -2,7 +2,7 @@
 #be able to sort it by field? 
 #search by location?
 
-def addMentor(directory):
+def add_mentor(directory):
     while True:
         name = input("Name: ")
         field = input("Field: ")
@@ -16,7 +16,7 @@ def addMentor(directory):
         else:
             print("Your entries {name}, {field}, {linkedin} are invalid. Please try again. ")
 
-def searchField(field: str, directory):
+def search_field(field: str, directory):
     if(directory):
         #search through the dict for the field
         #put mentor into answer dictionary
@@ -28,7 +28,7 @@ def searchField(field: str, directory):
     else:
         print("There are no mentors available currently.")
 
-def searchLocation(location: str, directory):
+def search_location(location: str, directory):
     #search through the dict for the country
     #put mentor into answer dictionary
     if(directory):
