@@ -1,7 +1,7 @@
 import requests, json
 
-file = open(r"secret.txt","r+")
-SECRET = file.readLine()
+file = open("secret.txt","r+")
+SECRET = file.readline()
 file.close()
 def get_input():
     while True:
@@ -10,11 +10,12 @@ def get_input():
             country = input("Country: ")
             
             #only getting 1st page for now
-            c_file = open(r"","r+")
+            c_file = open("countries","r+")
             correct_country = False
             while True:
                 line = c_file.readline()
-                if country == line:
+                
+                if country+'\n' == line:
                     correct_country = True
                     break
                 if not line:
@@ -49,17 +50,22 @@ def get_data(data: str, country: str, indicator: int):
         feedback = requests.request("GET", base_url, headers=required, params=search_parameters)
         
         result = feedback.json()
-
-        with open('jobresults.json', 'w') as json_file:
-            json.dump(result, json_file)
+        with open('jobresults.json') as json_file:
+            d = json.load(json_file)
         json_file.close()
+        ans = list()
         
-    #If we recieve a JSONDecodeError, our user must have inputed the wrong stock symbol
+        #print(d['results'][1]['country'])
+
+        for item in d['results']: #loops through every result(job posting), d['results'] is a list
+                if item['country'] == country:
+                 ans.append(item)
+        print(ans)
+        
     except json.decoder.JSONDecodeError:
-        #Inform the User that we cannot find stock data for their given symbol
-        print(f'Cannot find jobs for {data} on page {page}.')
+        print(f'Cannot find jobs for {data}.')
         return false
             
 if __name__ == '__main__':
-    get_data("qa", 1)         
+    get_input()        
         
