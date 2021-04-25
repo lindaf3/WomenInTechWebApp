@@ -10,29 +10,27 @@
         <title></title>
     </head>
     <body>
-        
+        <div id="container">
             <div class="topnav">
                 <a href="#" >Connect with others</a>
-                <a href="project">Project Ideas</a>
-                <a href="job">Job search</a>
+                <a href="#">Project Ideas</a>
+                <a href="jobsearch">Job search</a>
                 <a href="#">Roadmaps</a>
                 <a href="/">Home</a>
 
-            </div>
-            <div id="container">  
+            </div>  
             <div id="content">
                 <h1>Job Search</h1>
 
-                top: 200px;
-    left: 390px;
-
                 <div id="">
-                    <input type="text" placeholder="Search for a Job" id="search" name="search"><br>
-                    <input type="text" placeholder="Search for a Job" ><br>
-                    <button type="submit">Search</button>
+                    <form action="/jobsearch" method="POST">
+                        <input style="top: 200px; left: 390px;" type="text" placeholder="Job Title" id="title" name="title"><br>
+                        <input style="top: 250px; left: 390px;" type="text" placeholder="Country: ex. United States" id="country" name="country"><br>
+                        <button type="submit" >Search</button>
+                    </form>
                 </div>
-                
-            </div>                
+            </div>
+                           
         </div>
 
     </body>

@@ -1,0 +1,41 @@
+body{
+    background: url(images/background.png) #27272F;
+    background-repeat: no-repeat;
+    background-size: 1250px;
+}
+h1{
+    font-size: 40px;
+    font-family: 'Spectral', serif;
+    font-weight: normal;
+    color: #EEE4F2;
+    text-align: center;
+}
+#container{
+    width: 800px;
+    height: 130px;
+    background-color: #EEE4F2;
+    margin: auto;
+    margin-top: 15px;
+}
+h2{
+    font-family: 'Karla', sans-serif;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: normal;
+    font-size: 24px;
+}
+h3{
+    font-family: 'Karla', sans-serif;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: normal;
+    font-size: 18px;
+}
+h4{
+    font-family: 'Karla', sans-serif;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: normal;
+    font-size: 16px;
+}
+
