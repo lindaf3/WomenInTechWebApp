@@ -40,6 +40,7 @@ def search_location(location: str, directory):
     else:
         print("There are no mentors available currently.")
 
+# fake people
 # DIRECTORY['zhiHau475'] = ['Mary Kane', 'Quality Assurance Engineer', 'America'] 
 # DIRECTORY['sdEddy4567'] = ['Shelly Zhang', 'Software Engineer', 'Canada'] 
 # DIRECTORY['julie34564'] = ['Sarah J. Smith', "Computer Engineer", 'America'] 
