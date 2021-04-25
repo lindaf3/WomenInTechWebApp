@@ -1,4 +1,4 @@
-DIRECTORY = {}
+#DIRECTORY = {}
 #be able to sort it by field? 
 #search by location?
 
@@ -26,7 +26,8 @@ def search_field(field: str, directory):
                 ans[k] = v
         return ans
     else:
-        return "There are no mentors available currently."
+        f = dict()
+        return f
 
 def search_location(location: str, directory):
     #search through the dict for the country
@@ -38,7 +39,8 @@ def search_location(location: str, directory):
                 ans[k] = v
         return ans
     else:
-        return "There are no mentors available currently."
+        f = dict()
+        return f
 
 # fake people
 # DIRECTORY['zhiHau475'] = ['Mary Kane', 'Quality Assurance Engineer', 'America'] 

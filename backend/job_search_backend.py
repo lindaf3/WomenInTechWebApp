@@ -3,11 +3,11 @@ import requests, json
 file = open("secret.txt","r+")
 SECRET = file.readline()
 file.close()
-def get_input():
+def get_input(title,country):
     while True:
-        indicator = input("Enter a keyword: ")
+        indicator = title
         if(indicator):
-            country = input("Country: ")
+            country = country
             
             #only getting 1st page for now
             c_file = open("countries","r+")
@@ -24,9 +24,10 @@ def get_input():
             if(correct_country):
                 break
             else:
-                print("Invalid country name. Please try again.")
+                f = list()
+                return f
         
-    get_data(indicator, country, 1)
+    return get_data(indicator, country, 1)
 
         
         
@@ -60,12 +61,13 @@ def get_data(data: str, country: str, indicator: int):
         for item in d['results']: #loops through every result(job posting), d['results'] is a list
                 if item['country'] == country:
                  ans.append(item)
-        print(ans)
+        return ans
         
     except json.decoder.JSONDecodeError:
         print(f'Cannot find jobs for {data}.')
-        return false
+        f = list()
+        return f
             
 if __name__ == '__main__':
-    get_input()             
+    get_input()        
         

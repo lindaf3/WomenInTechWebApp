@@ -3,7 +3,7 @@ body{
     background-repeat: no-repeat;
     background-size: 1250px;
 }
-h1{
+h1, a{
     font-size: 40px;
     font-family: 'Spectral', serif;
     font-weight: normal;

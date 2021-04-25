@@ -21,7 +21,9 @@
             </div>  
             <div id="content">
                 <h1>Job Results</h1>
-                <h1 style="top: 450px; left: 390px;">{{ result }}</h1>
+                {% for r in result %}
+                    <a href="{{ r['detail_url'] }}" style="top: 450px; left: 390px;">{{ r['title'] }}, {{ r['company_name'] }}</h1><br>
+                {% endfor %}    
                 
             </div>
                            
