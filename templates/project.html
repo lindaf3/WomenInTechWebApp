@@ -20,12 +20,28 @@
             </div>
             <div id="content">
                 <h1>Project Ideas</h1>
-                <input type="text" id="name" placeholder="Enter Your Name">
-                <textarea wrap="off" id="ideas" name="ideas" rows="6" cols="100" placeholder="Submit Your Ideas!"></textarea>
-                 <button id="submit">Submit</button>
-                 <a href="projects/pro1.html"><button id="idea">Show me Project Ideas</button></a>
-        </div>
-        
+                <form action="/project" method="POST">
+                    <input type="text" id="name" placeholder="Enter Your Name">
+                    <textarea wrap="off" id="ideas" name="ideas" rows="6" cols="100" placeholder="Submit Your Ideas!"></textarea>
+                    <button id="submit">Submit</button>
+                </form>
+                <a href="/pro1"><button id="idea">Show me Project Ideas</button></a><br>
+                <br>
+                <br>
+                {% if posts != ""%}
+                    <h1>Top Ideas</h1>
+                    <div id="display">
+                    {% for p in posts %}
+                        <div id="container">
+                          <h2>{{ p.description }}</h2>
+                          <h3>{{ p.poster }}</h3>
+                          <h4>{{ p.votes }}</h4>
+                        
+                        </div> 
+                    {% endfor %}
+                    </div>    
+                {% endif %}
+            </div>
         
     </body>
 </html>

@@ -17,27 +17,58 @@
           <h1>Connect with people</h1>
 
           <div id="container">
-            <form action="/connect" method="POST">
-              <label name=label>Become a Mentor</label><br>
+            <form action="/connect1" method="POST">
+              <label>Become a Mentor</label><br>
               <input  type="text" placeholder="Full Name" id="fullname" name="fullname"><br>
               <input  type="text" placeholder="Job Title" id="job" name="job"><br>
-              <input  type="text" placeholder="Linkedin ID" id="linkedin" name="linkedin"><br>
+              <input  type="text" placeholder="LinkedIn ID" id="linkedin" name="linkedin"><br>
               <input  type="text" placeholder="Country: ex. United States" id="country" name="country"><br>
               <button type="submit" >Enter</button>
+              <a>{{ message }}</a>
             </form>
+            
 
-            <form action="/connect" method="POST">
-              <label name="label">Search by Job</label><br>
+            <form action="/connect2" method="POST">
+              <label>Search by Job</label><br>
               <input  type="text" placeholder="Job Title" id="field" name="field"><br>
               <button type="submit" >Search</button>
+              {% if m2 == "" %}
+                <a>{{ m2 }}</a>
+              {% endif %}  
             </form>
+            
 
-            <form action="/connect" method="POST">
-              <label name="label">Search by Location</label><br>
+            <form action="/connect3" method="POST">
+              <label>Search by Location</label><br>
               <input  type="text" placeholder="Country: ex. United States" id="location" name="location"><br>
               <button type="submit" >Search</button>
+              {% if m3 == "" %}
+                <a>{{ m3 }}</a>
+              {% endif %}
             </form>
           </div>
+
+          {% if m2 != "" %}
+            <div id="display">
+            {% for m in m2 %}
+              <div id="container">
+                  <h2>LinkedIn ID: {{ m }}</h2>
+
+              </div>
+            {% endfor %}
+            </div>
+          {% endif %}
+
+          {% if m3 != "" %}
+            <div id="display">
+            {% for m in m3 %}
+              <div id="container">
+                <h2>LinkedIn ID: {{ m }}</h2>
+
+              </div>  
+            {% endfor %}
+            </div>
+          {% endif %}
 
           <div id="display">
           <div id="container">

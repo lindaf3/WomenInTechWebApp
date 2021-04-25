@@ -51,3 +51,9 @@ input{
     left:270px;
     
 }
+#container{
+    width: 800px;
+    height: 130px;
+    background-color: #EEE4F2;
+    margin: auto;
+    margin-top: 15px;
