@@ -1,7 +1,6 @@
 
 import operator
 
-
 class Post:
     def __init__(self,pid,description,poster,votes):
         self.pid = pid
@@ -14,6 +13,7 @@ class Post:
         self.votes += 1
     def downvote(self):
         self.votes -= 1
+
         
 def add_project_idea(chron_posts, description: str, poster: str):
     #a post always starts with 1 upvote
