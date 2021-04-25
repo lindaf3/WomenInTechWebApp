@@ -6,7 +6,7 @@
 import requests, json
 from flask import Flask, render_template, flash, redirect, request
 import cv2
-#import backend.job_search_backend
+import backend.job_search_backend
 #import backend.mentors
 #import backend.project_ideas 
 
@@ -22,6 +22,7 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 def index():
     return render_template('landingpage.html')
 
+
 #job search
 @app.route('/jobsearch', methods=('GET', 'POST'))
 def jobsearch():
@@ -31,8 +32,7 @@ def jobsearch():
         country = request.form.get('country')
         #get_data(form.search_terms.data)
         #redirect here
-        print(title)
-        return render_template('landingpage.html')
+        return render_template('result.html', result= title)
     return render_template('jobsearch.html')
 
 #display results 

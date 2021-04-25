@@ -67,5 +67,5 @@ def get_data(data: str, country: str, indicator: int):
         return false
             
 if __name__ == '__main__':
-    get_input()        
+    get_input()             
         
