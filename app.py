@@ -46,18 +46,22 @@ def jobsearch():
         return render_template('result.html', result=result)
     return render_template('jobsearch.html')
 
-#adding and viewing mentors
-@app.route('/connect', methods=('GET','POST'))
+@app.route('/connect')
 def connect():
-    if request.method == "POST":
-        if request.form.get('label') == "Become a Mentor":
-            name = request.form.get('fullname') 
-            field = request.form.get('job')
-            linkedin = request.form.get('linkedin') 
-            location = request.form.get('country')
-            mentor = [name, field, linkedin, location]
-            message = add_mentor(mentor, DIRECTORY)
-            return render_template('connect.html', message=message, m2="", m3="")
+    return render_template('connect.html')
+
+#adding and viewing mentors
+# @app.route('/connect', methods=('GET','POST'))
+# def connect():
+#     if request.method == "POST":
+#         if request.form.get('label') == "Become a Mentor":
+#             name = request.form.get('fullname') 
+#             field = request.form.get('job')
+#             linkedin = request.form.get('linkedin') 
+#             location = request.form.get('country')
+#             mentor = [name, field, linkedin, location]
+#             message = add_mentor(mentor, DIRECTORY)
+#             return render_template('connect.html', message=message, m2="", m3="")
 
         # field = request.form.get('field')
         # m2 = search_field(field, DIRECTORY)
@@ -66,12 +70,12 @@ def connect():
         # location = request.form.get('location')
         # m3 = search_location(l, DIRECTORY)
         # return render_template('connect .html', message="", m2="", m3=m3)
-    return render_template('connect.html', message="", m2="", m3="")
+    # return render_template('connect.html', message="", m2="", m3="")
         
 
 #posting project ideas
-# @app.route('/projectideas', methods=('GET', 'POST'))
-# def project():
-#     return render_template('projectideas.html')
+@app.route('/project', methods=('GET', 'POST'))
+def project():
+     return render_template('project.html')
 
  
