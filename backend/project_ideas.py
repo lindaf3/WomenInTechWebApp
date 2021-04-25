@@ -1,5 +1,5 @@
 
-def addProjectIdea(posts, description: str, poster: str):
+def add_project_idea(posts, description: str, poster: str):
     #a post always starts with 1 upvote
     pid = len(posts)
     posts.insert([pid, poster, description, 1])
